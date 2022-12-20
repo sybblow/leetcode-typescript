@@ -2,27 +2,36 @@
 // https://leetcode.com/problems/count-vowels-permutation/
 export default function countVowelPermutation(n: number): number {
   function traverse(nextChars: string[], n: number): number {
-    if (n === 0) return 1;
+    if (n === 1) return nextChars.length;
 
     let permutation = 0;
-
     for (const char of nextChars) {
-      const key = `${char}*${n}`;
-
-      if (!memo.has(key)) {
-        memo.set(key, traverse(NEXT_CHARS_EACH_CHAR.get(char), n - 1));
-      }
-
-      permutation += memo.get(key);
+      permutation += calcChar(char, n);
     }
 
     return permutation % DIVISOR;
   }
 
+  function calcChar(char: string, n: number): number {
+    return calcThroughCache(
+      `${char}*${n}`,
+      () => traverse(NEXT_CHARS_EACH_CHAR.get(char)!, n - 1),
+    );
+  }
+
+  function calcThroughCache(key: string, calcCall: () => number): number {
+    let v = memo.get(key);
+    if (v === undefined) {
+      v = calcCall();
+      memo.set(key, v);
+    }
+    return v;
+  }
+
   return traverse(["a", "e", "i", "o", "u"], n);
 }
 
-const memo = new Map();
+const memo: Map<string, number> = new Map();
 
 const DIVISOR = 1e9 + 7;
 
@@ -31,5 +40,5 @@ const NEXT_CHARS_EACH_CHAR = new Map([
   ["e", ["a", "i"]],
   ["i", ["a", "e", "o", "u"]],
   ["o", ["i", "u"]],
-  ["u", ["a"]]
+  ["u", ["a"]],
 ]);

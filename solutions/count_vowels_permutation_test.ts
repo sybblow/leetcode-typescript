@@ -7,5 +7,4 @@ Deno.test("1220. Count Vowels Permutation", () => {
   assertStrictEquals(countVowelPermutation(5), 68);
   assertStrictEquals(countVowelPermutation(144), 18208803);
   assertStrictEquals(countVowelPermutation(2000), 793084836);
-  assertStrictEquals(countVowelPermutation(0), 1);
 });
