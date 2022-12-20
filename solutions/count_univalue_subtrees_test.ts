@@ -1,16 +1,16 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import { assertStrictEq } from "https://deno.land/std/testing/asserts.ts";
+
+import { assertStrictEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import { createBinaryTreeNode } from "../data_structures/binary_tree.ts";
 import countUnivalSubtrees from "./count_univalue_subtrees.ts";
 
-test("250. Count Univalue Subtrees", () => {
-  assertStrictEq(
+Deno.test("250. Count Univalue Subtrees", () => {
+  assertStrictEquals(
     countUnivalSubtrees(createBinaryTreeNode([5, 1, 5, 5, 5, null, 5])),
     4
   );
-  assertStrictEq(
+  assertStrictEquals(
     countUnivalSubtrees(createBinaryTreeNode([1, 4, 3, 4, 4, 5, 6])),
     5
   );
-  assertStrictEq(countUnivalSubtrees(createBinaryTreeNode([])), 0);
+  assertStrictEquals(countUnivalSubtrees(createBinaryTreeNode([])), 0);
 });

@@ -1,8 +1,8 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+import { assertEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import findAnagrams from "./find_all_anagrams_in_a_string.ts";
 
-test("438. Find All Anagrams in a String", () => {
+Deno.test("438. Find All Anagrams in a String", () => {
   assertEquals(findAnagrams("cbaebabacd", "abc"), [0, 6]);
   assertEquals(findAnagrams("abab", "ab"), [0, 1, 2]);
   assertEquals(

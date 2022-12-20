@@ -1,8 +1,8 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+import { assertEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import floodFill from "./flood_fill.ts";
 
-test("733. Flood Fill", () => {
+Deno.test("733. Flood Fill", () => {
   assertEquals(floodFill([[1, 1, 1], [1, 1, 0], [1, 0, 1]], 1, 1, 2), [
     [2, 2, 2],
     [2, 2, 0],

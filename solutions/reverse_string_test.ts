@@ -1,8 +1,8 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+import { assertEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import reverseString from "./reverse_string.ts";
 
-test("344. Reverse String", () => {
+Deno.test("344. Reverse String", () => {
   const chars1 = ["h", "e", "l", "l", "o"];
 
   reverseString(chars1);

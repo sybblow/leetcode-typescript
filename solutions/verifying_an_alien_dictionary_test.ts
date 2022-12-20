@@ -1,17 +1,17 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import { assertStrictEq } from "https://deno.land/std/testing/asserts.ts";
+
+import { assertStrictEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import isAlienSorted from "./verifying_an_alien_dictionary.ts";
 
-test("953. Verifying an Alien Dictionary", () => {
-  assertStrictEq(
+Deno.test("953. Verifying an Alien Dictionary", () => {
+  assertStrictEquals(
     isAlienSorted(["hello", "leetcode"], "hlabcdefgijkmnopqrstuvwxyz"),
     true
   );
-  assertStrictEq(
+  assertStrictEquals(
     isAlienSorted(["word", "world", "row"], "worldabcefghijkmnpqstuvxyz"),
     false
   );
-  assertStrictEq(
+  assertStrictEquals(
     isAlienSorted(["apple", "app"], "abcdefghijklmnopqrstuvwxyz"),
     false
   );

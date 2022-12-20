@@ -1,9 +1,9 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import { assertStrictEq } from "https://deno.land/std/testing/asserts.ts";
+
+import { assertStrictEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import maxAreaOfIsland from "./max_area_of_island.ts";
 
-test("695. Max Area of Island", () => {
-  assertStrictEq(
+Deno.test("695. Max Area of Island", () => {
+  assertStrictEquals(
     maxAreaOfIsland([
       [0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
@@ -16,7 +16,7 @@ test("695. Max Area of Island", () => {
     ]),
     6
   );
-  assertStrictEq(
+  assertStrictEquals(
     maxAreaOfIsland([
       [1, 1, 0, 0, 0],
       [1, 1, 0, 0, 0],
@@ -25,5 +25,5 @@ test("695. Max Area of Island", () => {
     ]),
     4
   );
-  assertStrictEq(maxAreaOfIsland([[0, 0, 0, 0, 0, 0, 0, 0]]), 0);
+  assertStrictEquals(maxAreaOfIsland([[0, 0, 0, 0, 0, 0, 0, 0]]), 0);
 });

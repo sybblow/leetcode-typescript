@@ -1,18 +1,18 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import { assertStrictEq } from "https://deno.land/std/testing/asserts.ts";
+
+import { assertStrictEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import longestPalindrome from "./longest_palindrome.ts";
 
-test("409. Longest Palindrome", () => {
-  assertStrictEq(longestPalindrome("abccccdd"), 7);
-  assertStrictEq(longestPalindrome("bb"), 2);
-  assertStrictEq(longestPalindrome("aaaAaaaa"), 7);
-  assertStrictEq(
+Deno.test("409. Longest Palindrome", () => {
+  assertStrictEquals(longestPalindrome("abccccdd"), 7);
+  assertStrictEquals(longestPalindrome("bb"), 2);
+  assertStrictEquals(longestPalindrome("aaaAaaaa"), 7);
+  assertStrictEquals(
     longestPalindrome(
       "zeusnilemacaronimaisanitratetartinasiaminoracamelinsuez"
     ),
     55
   );
-  assertStrictEq(
+  assertStrictEquals(
     longestPalindrome(
       "civilwartestingwhetherthatnaptionoranynartionsoconceivedandsodedicatedcanlongendureWeareqmetonagreatbattlefiemldoftzhatwarWehavecometodedicpateaportionofthatfieldasafinalrestingplaceforthosewhoheregavetheirlivesthatthatnationmightliveItisaltogetherfangandproperthatweshoulddothisButinalargersensewecannotdedicatewecannotconsecratewecannothallowthisgroundThebravelmenlivinganddeadwhostruggledherehaveconsecrateditfaraboveourpoorponwertoaddordetractTgheworldadswfilllittlenotlenorlongrememberwhatwesayherebutitcanneverforgetwhattheydidhereItisforusthelivingrathertobededicatedheretotheulnfinishedworkwhichtheywhofoughtherehavethusfarsonoblyadvancedItisratherforustobeherededicatedtothegreattdafskremainingbeforeusthatfromthesehonoreddeadwetakeincreaseddevotiontothatcauseforwhichtheygavethelastpfullmeasureofdevotionthatweherehighlyresolvethatthesedeadshallnothavediedinvainthatthisnationunsderGodshallhaveanewbirthoffreedomandthatgovernmentofthepeoplebythepeopleforthepeopleshallnotperishfromtheearth"
     ),

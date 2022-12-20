@@ -1,16 +1,16 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import { assertStrictEq } from "https://deno.land/std/testing/asserts.ts";
+
+import { assertStrictEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import { createBinaryTreeNode } from "../data_structures/binary_tree.ts";
 import diameterOfBinaryTree from "./diameter_of_binary_tree.ts";
 
-test("543. Diameter of Binary Tree", () => {
-  assertStrictEq(
+Deno.test("543. Diameter of Binary Tree", () => {
+  assertStrictEquals(
     diameterOfBinaryTree(createBinaryTreeNode([1, 2, 3, 4, 5])),
     3
   );
-  assertStrictEq(diameterOfBinaryTree(createBinaryTreeNode([1])), 0);
-  assertStrictEq(diameterOfBinaryTree(createBinaryTreeNode([])), 0);
-  assertStrictEq(
+  assertStrictEquals(diameterOfBinaryTree(createBinaryTreeNode([1])), 0);
+  assertStrictEquals(diameterOfBinaryTree(createBinaryTreeNode([])), 0);
+  assertStrictEquals(
     diameterOfBinaryTree(
       createBinaryTreeNode([
         4,

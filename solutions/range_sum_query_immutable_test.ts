@@ -1,12 +1,12 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import { assertStrictEq } from "https://deno.land/std/testing/asserts.ts";
+
+import { assertStrictEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import NumArray from "./range_sum_query_immutable.ts";
 
-test("303. Range Sum Query - Immutable", () => {
-  assertStrictEq(new NumArray([-2, 0, 3, -5, 2, -1]).sumRange(0, 2), 1);
-  assertStrictEq(new NumArray([-2, 0, 3, -5, 2, -1]).sumRange(2, 5), -1);
-  assertStrictEq(new NumArray([-2, 0, 3, -5, 2, -1]).sumRange(0, 5), -3);
-  assertStrictEq(
+Deno.test("303. Range Sum Query - Immutable", () => {
+  assertStrictEquals(new NumArray([-2, 0, 3, -5, 2, -1]).sumRange(0, 2), 1);
+  assertStrictEquals(new NumArray([-2, 0, 3, -5, 2, -1]).sumRange(2, 5), -1);
+  assertStrictEquals(new NumArray([-2, 0, 3, -5, 2, -1]).sumRange(0, 5), -3);
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -24,7 +24,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(0, 8),
     4830
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -42,7 +42,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(4, 5),
     6383
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -60,7 +60,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(9, 11),
     -15886
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -78,7 +78,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(2, 11),
     -5095
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -96,7 +96,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(0, 12),
     -15759
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -114,7 +114,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(9, 12),
     -20589
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -132,7 +132,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(2, 5),
     11228
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -150,7 +150,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(0, 9),
     -1149
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -168,7 +168,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(5, 9),
     -9683
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -186,7 +186,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(0, 1),
     -5961
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -204,7 +204,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(12, 12),
     -4703
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -222,7 +222,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(6, 7),
     -6688
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -240,7 +240,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(5, 8),
     -3704
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -258,7 +258,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(1, 1),
     2300
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -276,7 +276,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(6, 7),
     -6688
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -294,7 +294,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(10, 11),
     -9907
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -312,7 +312,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(11, 12),
     -9319
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -330,7 +330,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(7, 8),
     -1851
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -348,7 +348,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(4, 11),
     -9940
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -366,7 +366,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(8, 9),
     272
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -384,7 +384,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(4, 11),
     -9940
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -402,7 +402,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(2, 9),
     4812
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -420,7 +420,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(2, 6),
     12642
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -438,7 +438,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(11, 12),
     -9319
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -456,7 +456,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(5, 8),
     -3704
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -474,7 +474,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(11, 11),
     -4616
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -492,7 +492,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(1, 9),
     7112
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -510,7 +510,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(12, 12),
     -4703
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -528,7 +528,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(10, 10),
     -5291
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -546,7 +546,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(4, 7),
     -305
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -564,7 +564,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(12, 12),
     -4703
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -582,7 +582,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(8, 10),
     -5019
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -600,7 +600,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(7, 9),
     -7830
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -618,7 +618,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(4, 7),
     -305
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -636,7 +636,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(0, 7),
     -1421
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -654,7 +654,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(8, 9),
     272
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -672,7 +672,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(10, 12),
     -14610
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -690,7 +690,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(0, 9),
     -1149
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -708,7 +708,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(10, 12),
     -14610
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -726,7 +726,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(7, 12),
     -22440
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -744,7 +744,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(9, 9),
     -5979
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -762,7 +762,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(0, 12),
     -15759
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -780,7 +780,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(1, 3),
     7145
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,
@@ -798,7 +798,7 @@ test("303. Range Sum Query - Immutable", () => {
     ]).sumRange(8, 8),
     6251
   );
-  assertStrictEq(
+  assertStrictEquals(
     new NumArray([
       -8261,
       2300,

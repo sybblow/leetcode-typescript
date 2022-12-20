@@ -5,7 +5,7 @@ export default function longestSubsequence(
   diff: number
 ): number {
   const indexes = new Map();
-  const values = [];
+  const values: number[] = [];
   let max = 0;
 
   for (let i = 0; i < numbers.length; ++i) {

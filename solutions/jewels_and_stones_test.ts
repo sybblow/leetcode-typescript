@@ -1,8 +1,8 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import { assertStrictEq } from "https://deno.land/std/testing/asserts.ts";
+
+import { assertStrictEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import numJewelsInStones from "./jewels_and_stones.ts";
 
-test("771. Jewels and Stones", () => {
-  assertStrictEq(numJewelsInStones("aA", "aAAbbbb"), 3);
-  assertStrictEq(numJewelsInStones("z", "ZZ"), 0);
+Deno.test("771. Jewels and Stones", () => {
+  assertStrictEquals(numJewelsInStones("aA", "aAAbbbb"), 3);
+  assertStrictEquals(numJewelsInStones("z", "ZZ"), 0);
 });

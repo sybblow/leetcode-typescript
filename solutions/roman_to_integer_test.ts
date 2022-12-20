@@ -1,14 +1,14 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import { assertStrictEq } from "https://deno.land/std/testing/asserts.ts";
+
+import { assertStrictEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import romanToInt from "./roman_to_integer.ts";
 
-test("13. Roman to Integer", () => {
-  assertStrictEq(romanToInt("VI"), 6);
-  assertStrictEq(romanToInt("IV"), 4);
-  assertStrictEq(romanToInt("III"), 3);
-  assertStrictEq(romanToInt("IIII"), 4);
-  assertStrictEq(romanToInt("XIII"), 13);
-  assertStrictEq(romanToInt("MDCLXVI"), 1666);
-  assertStrictEq(romanToInt("MCDCXLXIV"), 1554);
-  assertStrictEq(romanToInt("CMCDXCXLIXIV"), 1443);
+Deno.test("13. Roman to Integer", () => {
+  assertStrictEquals(romanToInt("VI"), 6);
+  assertStrictEquals(romanToInt("IV"), 4);
+  assertStrictEquals(romanToInt("III"), 3);
+  assertStrictEquals(romanToInt("IIII"), 4);
+  assertStrictEquals(romanToInt("XIII"), 13);
+  assertStrictEquals(romanToInt("MDCLXVI"), 1666);
+  assertStrictEquals(romanToInt("MCDCXLXIV"), 1554);
+  assertStrictEquals(romanToInt("CMCDXCXLIXIV"), 1443);
 });

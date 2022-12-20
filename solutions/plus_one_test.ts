@@ -1,8 +1,8 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+import { assertEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import plusOne from "./plus_one.ts";
 
-test("66. Plus One", () => {
+Deno.test("66. Plus One", () => {
   assertEquals(plusOne([1, 2, 3]), [1, 2, 4]);
   assertEquals(plusOne([1, 2, 9]), [1, 3, 0]);
   assertEquals(plusOne([9, 9, 9]), [1, 0, 0, 0]);

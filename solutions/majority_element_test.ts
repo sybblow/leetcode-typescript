@@ -1,8 +1,8 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import { assertStrictEq } from "https://deno.land/std/testing/asserts.ts";
+
+import { assertStrictEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import majorityElement from "./majority_element.ts";
 
-test("169. Majority Element", () => {
-  assertStrictEq(majorityElement([3, 2, 3]), 3);
-  assertStrictEq(majorityElement([2, 2, 1, 1, 1, 2, 2]), 2);
+Deno.test("169. Majority Element", () => {
+  assertStrictEquals(majorityElement([3, 2, 3]), 3);
+  assertStrictEquals(majorityElement([2, 2, 1, 1, 1, 2, 2]), 2);
 });

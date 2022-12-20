@@ -1,9 +1,9 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+import { assertEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import { createBinaryTreeNode } from "../data_structures/binary_tree.ts";
 import postorderTraversal from "./binary_tree_postorder_traversal.ts";
 
-test("145. Binary Tree Postorder Traversal", () => {
+Deno.test("145. Binary Tree Postorder Traversal", () => {
   assertEquals(postorderTraversal(createBinaryTreeNode([1, null, 2, 3])), [
     3,
     2,

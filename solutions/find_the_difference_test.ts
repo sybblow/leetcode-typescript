@@ -1,8 +1,8 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import { assertStrictEq } from "https://deno.land/std/testing/asserts.ts";
+
+import { assertStrictEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import findTheDifference from "./find_the_difference.ts";
 
-test("389. Find the Difference", () => {
-  assertStrictEq(findTheDifference("abcd", "abcde"), "e");
-  assertStrictEq(findTheDifference("abcdd", "abdcdd"), "d");
+Deno.test("389. Find the Difference", () => {
+  assertStrictEquals(findTheDifference("abcd", "abcde"), "e");
+  assertStrictEquals(findTheDifference("abcdd", "abdcdd"), "d");
 });

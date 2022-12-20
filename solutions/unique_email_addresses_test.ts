@@ -1,9 +1,9 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import { assertStrictEq } from "https://deno.land/std/testing/asserts.ts";
+
+import { assertStrictEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import numUniqueEmails from "./unique_email_addresses.ts";
 
-test("929. Unique Email Addresses", () => {
-  assertStrictEq(
+Deno.test("929. Unique Email Addresses", () => {
+  assertStrictEquals(
     numUniqueEmails([
       "test.email+alex@leetcode.com",
       "test.e.mail+bob.cathy@leetcode.com",
@@ -11,7 +11,7 @@ test("929. Unique Email Addresses", () => {
     ]),
     2
   );
-  assertStrictEq(
+  assertStrictEquals(
     numUniqueEmails([
       "testemail@leetcode.com",
       "testemail1@leetcode.com",

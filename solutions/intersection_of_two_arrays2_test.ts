@@ -1,8 +1,8 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+import { assertEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import intersect from "./intersection_of_two_arrays2.ts";
 
-test("350. Intersection of Two Arrays II", () => {
+Deno.test("350. Intersection of Two Arrays II", () => {
   assertEquals(intersect([1, 2, 2, 1], [2, 2]), [2, 2]);
   assertEquals(intersect([4, 9, 5], [9, 4, 9, 8, 4]), [4, 9]);
   assertEquals(

@@ -1,9 +1,9 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import { assertStrictEq } from "https://deno.land/std/testing/asserts.ts";
+
+import { assertStrictEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import isAnagram from "./valid_anagram.ts";
 
-test("242. Valid Anagram", () => {
-  assertStrictEq(isAnagram("anagram", "nagaram"), true);
-  assertStrictEq(isAnagram("car", "rat"), false);
-  assertStrictEq(isAnagram("a", "aa"), false);
+Deno.test("242. Valid Anagram", () => {
+  assertStrictEquals(isAnagram("anagram", "nagaram"), true);
+  assertStrictEquals(isAnagram("car", "rat"), false);
+  assertStrictEquals(isAnagram("a", "aa"), false);
 });

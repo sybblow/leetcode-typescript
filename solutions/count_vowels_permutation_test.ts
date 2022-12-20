@@ -1,12 +1,11 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import { assertStrictEq } from "https://deno.land/std/testing/asserts.ts";
+import { assertStrictEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import countVowelPermutation from "./count_vowels_permutation.ts";
 
-test("1220. Count Vowels Permutation", () => {
-  assertStrictEq(countVowelPermutation(1), 5);
-  assertStrictEq(countVowelPermutation(2), 10);
-  assertStrictEq(countVowelPermutation(5), 68);
-  assertStrictEq(countVowelPermutation(144), 18208803);
-  assertStrictEq(countVowelPermutation(2000), 793084836);
-  assertStrictEq(countVowelPermutation(0), 1);
+Deno.test("1220. Count Vowels Permutation", () => {
+  assertStrictEquals(countVowelPermutation(1), 5);
+  assertStrictEquals(countVowelPermutation(2), 10);
+  assertStrictEquals(countVowelPermutation(5), 68);
+  assertStrictEquals(countVowelPermutation(144), 18208803);
+  assertStrictEquals(countVowelPermutation(2000), 793084836);
+  assertStrictEquals(countVowelPermutation(0), 1);
 });

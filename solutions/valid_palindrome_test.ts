@@ -1,10 +1,10 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import { assertStrictEq } from "https://deno.land/std/testing/asserts.ts";
+
+import { assertStrictEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import isPalindrome from "./valid_palindrome.ts";
 
-test("125. Valid Palindrome", () => {
-  assertStrictEq(isPalindrome("A man, a plan, a canal: Panama"), true);
-  assertStrictEq(isPalindrome("race a car"), false);
-  assertStrictEq(isPalindrome(""), true);
-  assertStrictEq(isPalindrome("0P"), false);
+Deno.test("125. Valid Palindrome", () => {
+  assertStrictEquals(isPalindrome("A man, a plan, a canal: Panama"), true);
+  assertStrictEquals(isPalindrome("race a car"), false);
+  assertStrictEquals(isPalindrome(""), true);
+  assertStrictEquals(isPalindrome("0P"), false);
 });

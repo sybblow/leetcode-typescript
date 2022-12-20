@@ -1,12 +1,12 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import { assertStrictEq } from "https://deno.land/std/testing/asserts.ts";
+
+import { assertStrictEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import longestCommonPrefix from "./longest_common_prefix.ts";
 
-test("14. Longest Common Prefix", () => {
-  assertStrictEq(longestCommonPrefix(["flower", "flow", "flight"]), "fl");
-  assertStrictEq(longestCommonPrefix(["dog", "racecar", "car"]), "");
-  assertStrictEq(longestCommonPrefix(["aca", "cba"]), "");
-  assertStrictEq(longestCommonPrefix([""]), "");
-  assertStrictEq(longestCommonPrefix(["a"]), "a");
-  assertStrictEq(longestCommonPrefix(["a", "b"]), "");
+Deno.test("14. Longest Common Prefix", () => {
+  assertStrictEquals(longestCommonPrefix(["flower", "flow", "flight"]), "fl");
+  assertStrictEquals(longestCommonPrefix(["dog", "racecar", "car"]), "");
+  assertStrictEquals(longestCommonPrefix(["aca", "cba"]), "");
+  assertStrictEquals(longestCommonPrefix([""]), "");
+  assertStrictEquals(longestCommonPrefix(["a"]), "a");
+  assertStrictEquals(longestCommonPrefix(["a", "b"]), "");
 });

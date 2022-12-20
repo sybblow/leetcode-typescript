@@ -1,14 +1,14 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import { assertStrictEq } from "https://deno.land/std/testing/asserts.ts";
+
+import { assertStrictEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import Logger from "./logger_rate_limiter.ts";
 
-test("359. Logger Rate Limiter", () => {
+Deno.test("359. Logger Rate Limiter", () => {
   const logger = new Logger();
 
-  assertStrictEq(logger.shouldPrintMessage(1, "foo"), true);
-  assertStrictEq(logger.shouldPrintMessage(2, "bar"), true);
-  assertStrictEq(logger.shouldPrintMessage(3, "foo"), false);
-  assertStrictEq(logger.shouldPrintMessage(8, "bar"), false);
-  assertStrictEq(logger.shouldPrintMessage(10, "foo"), false);
-  assertStrictEq(logger.shouldPrintMessage(11, "foo"), true);
+  assertStrictEquals(logger.shouldPrintMessage(1, "foo"), true);
+  assertStrictEquals(logger.shouldPrintMessage(2, "bar"), true);
+  assertStrictEquals(logger.shouldPrintMessage(3, "foo"), false);
+  assertStrictEquals(logger.shouldPrintMessage(8, "bar"), false);
+  assertStrictEquals(logger.shouldPrintMessage(10, "foo"), false);
+  assertStrictEquals(logger.shouldPrintMessage(11, "foo"), true);
 });

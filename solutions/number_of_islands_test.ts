@@ -1,9 +1,9 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import { assertStrictEq } from "https://deno.land/std/testing/asserts.ts";
+
+import { assertStrictEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import numIslands from "./number_of_islands.ts";
 
-test("200. Number of Islands", () => {
-  assertStrictEq(
+Deno.test("200. Number of Islands", () => {
+  assertStrictEquals(
     numIslands([
       ["1", "1", "1", "1", "0"],
       ["1", "1", "0", "1", "0"],
@@ -12,7 +12,7 @@ test("200. Number of Islands", () => {
     ]),
     1
   );
-  assertStrictEq(
+  assertStrictEquals(
     numIslands([
       ["1", "1", "0", "0", "0"],
       ["1", "1", "0", "0", "0"],

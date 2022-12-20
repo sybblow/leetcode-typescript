@@ -1,9 +1,9 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+import { assertEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import { createBinaryTreeNode } from "../data_structures/binary_tree.ts";
 import levelorder from "./binary_tree_level_order_traversal.ts";
 
-test("102. Binary Tree Level Order Traversal", () => {
+Deno.test("102. Binary Tree Level Order Traversal", () => {
   assertEquals(levelorder(createBinaryTreeNode([1, null, 2, 3])), [
     [1],
     [2],

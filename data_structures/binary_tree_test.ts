@@ -1,11 +1,11 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
+
 import {
   assertEquals,
-  assertStrictEq
-} from "https://deno.land/std/testing/asserts.ts";
+  assertStrictEquals
+} from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import { createBinaryTreeNode } from "./binary_tree.ts";
 
-test("createBinaryTreeNode() returns a BinaryTreeNode", () => {
+Deno.test("createBinaryTreeNode() returns a BinaryTreeNode", () => {
   assertEquals(createBinaryTreeNode([1, 2, 3]), {
     val: 1,
     left: { val: 2, left: null, right: null },
@@ -65,6 +65,6 @@ test("createBinaryTreeNode() returns a BinaryTreeNode", () => {
   });
 });
 
-test("createBinaryTreeNode() returns null when the given array is empty", () => {
-  assertStrictEq(createBinaryTreeNode([]), null);
+Deno.test("createBinaryTreeNode() returns null when the given array is empty", () => {
+  assertStrictEquals(createBinaryTreeNode([]), null);
 });

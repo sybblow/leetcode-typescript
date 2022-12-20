@@ -1,9 +1,9 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import { assertStrictEq } from "https://deno.land/std/testing/asserts.ts";
+
+import { assertStrictEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
 import longestCommonSubsequence from "./longest_common_subsequence.ts";
 
-test("1143. Longest Common Subsequence", () => {
-  assertStrictEq(longestCommonSubsequence("abcde", "ace"), 3);
-  assertStrictEq(longestCommonSubsequence("abc", "abc"), 3);
-  assertStrictEq(longestCommonSubsequence("abc", "def"), 0);
+Deno.test("1143. Longest Common Subsequence", () => {
+  assertStrictEquals(longestCommonSubsequence("abcde", "ace"), 3);
+  assertStrictEquals(longestCommonSubsequence("abc", "abc"), 3);
+  assertStrictEquals(longestCommonSubsequence("abc", "def"), 0);
 });
