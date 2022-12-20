@@ -1,34 +1,35 @@
 // 38. Count and Say
 // https://leetcode.com/problems/count-and-say/
 export default function countAndSay(n: number): string {
-  function recursion(string: string): string {
-    let lastChar = string[0];
-    let lastCharStreak = 0;
+  function recursion(s: string): string {
     let result = "";
-
-    for (let i = 0; i < string.length; ++i) {
-      if (string[i] === lastChar) {
-        lastCharStreak += 1;
-
-        continue;
-      } else {
-        result += `${lastCharStreak}${lastChar}`;
-
-        lastChar = string[i];
-        lastCharStreak = 1;
-      }
+    for (const [ch, count] of uniq(s)) {
+      result += `${count}${ch}`;
     }
-
-    result += `${lastCharStreak}${lastChar}`;
-
     return result;
   }
 
-  let result = "1";
-
-  for (let i = 1; i < n; ++i) {
-    result = recursion(result);
+  function* uniq(s: string): Generator<[string, number]> {
+    let last = "";
+    let count = 0;
+    for (const ch of s + ".") {
+      if (ch === last) {
+        count++;
+        continue;
+      }
+      if (count > 0) {
+        yield [last, count];
+      }
+      last = ch;
+      count = 1;
+    }
   }
 
-  return result;
+  let i = 1;
+  let v = "1";
+  while (i < n) {
+    i++;
+    v = recursion(v);
+  }
+  return v;
 }
